@@ -274,24 +274,6 @@ All displayed ping tests completed with **0% packet loss**.
 
 ![Kali interface and connectivity tests after snapshot restoration](O-Kali%20-%20Windows%20and%20Android.png)
 
-### ✅ Results Summary
-
-| Source | Destination | Recorded result |
-| --- | --- | --- |
-| Android 9 | External IP `8.8.8.8` | 4/4 replies; 0% loss |
-| Android 9 | Gateway `10.0.0.1` | 4/4 replies; 0% loss |
-| Android 9 | Kali `10.0.0.2` | 4/4 replies; 0% loss |
-| Android 9 | Windows `10.0.0.10` | Initial failure; retry 4/4 replies, 0% loss |
-| Windows 10 | Own address `10.0.0.10` | 4/4 replies; 0% loss |
-| Windows 10 | External IP `8.8.8.8` | 4/4 replies; 0% loss |
-| Windows 10 | Gateway `10.0.0.1` | 4/4 replies; 0% loss |
-| Windows 10 | Android `10.0.0.9` | 4/4 replies; 0% loss |
-| Kali Linux | Gateway `10.0.0.1` | 6/6 replies; 0% loss |
-| Kali Linux | External IP `8.8.8.8` | 6/6 replies; 0% loss |
-| Kali Linux | Android `10.0.0.9` | 10/10 replies; 0% loss |
-| Kali Linux | Windows `10.0.0.10` | 10/10 replies; 0% loss |
-
-**Verification scope:** Pinging `8.8.8.8` demonstrates external IP reachability. These screenshots do not establish DNS resolution or access to web services.
 
 ---
 
@@ -301,7 +283,7 @@ All displayed ping tests completed with **0% packet loss**.
 
 The first Android ping to `10.0.0.10` recorded four transmitted packets with no replies. Repeating the command later produced four replies with no packet loss.
 
-The screenshots document the failure and successful retry, but do not establish the cause or any configuration change made between attempts.
+
 
 For a similar issue, useful checks include confirming that the destination VM is running, both adapters use the same NAT Network, the IP settings are correct, and the destination firewall permits the intended ICMP test.
 
@@ -348,10 +330,12 @@ NAT connectivity and shared folders do not provide complete isolation. For futur
 ---
 
 # 👤 Author
+---
 **Mokone Tebogo**
 
 **LinkedIn:** https://www.linkedin.com/in/tebogo-mokone-ba2b35261/
 
 ---
-
-**Programme:** Cybersecurity at Networkwalks | **Cohort:** B084 | **Week:** 01 | **Module:** PM1 — Cybersecurity Lab Setup | **Repository:** GitHub
+# 📌 Project Information
+---
+**Programme Name:** Cybersecurity at Networkwalks | **Cohort:** B084 | **Week:** 01 | **Module:** PM1 — Cybersecurity Lab Setup | **Repository:** GitHub
