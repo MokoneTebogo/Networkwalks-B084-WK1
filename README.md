@@ -20,7 +20,7 @@
 
 This project documents my **Networkwalks B084 — Week 1, Project Module 1** cybersecurity lab setup using Oracle VirtualBox.
 
-I configured Kali Linux, Windows 10 and Android 9 on a shared **NAT Network**, checked their IPv4 settings, created and restored a Kali snapshot, and tested communication between the virtual machines.
+Configured Kali Linux, Windows 10 and Android 9 on a shared **NAT Network**, checked their IPv4 settings, created and restored a Kali snapshot, and tested communication between the virtual machines.
 
 The lab provides a foundation for future networking, reconnaissance and authorized security exercises. The screenshots below document the configuration and results achieved during this project.
 
@@ -63,16 +63,6 @@ The NAT Network supports communication between the lab VMs and outbound connecti
 | Network mode | NAT Network |
 | IPv4 prefix | `10.0.0.0/24` |
 | DHCP | Enabled on the NAT Network |
-| IPv6 | Enable IPv6 checkbox unchecked |
-| Kali adapter | Intel PRO/1000 MT Desktop (82540EM) |
-| Kali promiscuous mode | Allow All |
-| Kali virtual cable | Connected |
-| Kali IPv4 method | Manual |
-| Shared folder | Host Downloads folder; full access; auto-mount enabled |
-| Snapshot name | `Snapshot 1` |
-| Snapshot description | `Clean Kali Linux Ip addressing` |
-
-Exact VirtualBox and Kali release versions, host hardware specifications and VM resource allocations are not established by the screenshots.
 
 ---
 
@@ -80,7 +70,7 @@ Exact VirtualBox and Kali release versions, host hardware specifications and VM 
 
 ## Step 1. Create the NAT Network
 
-In VirtualBox Network Manager, I configured a NAT Network with the following settings:
+In VirtualBox Network Manager, configured a NAT Network with the following settings:
 
 ```text
 Network name: Virtual NAT Network
@@ -97,7 +87,7 @@ This network provides a common subnet for the three lab machines.
 
 ## Step 2. Connect Kali to the NAT Network
 
-I enabled Kali's first network adapter and attached it to the configured NAT Network.
+Enabled Kali's first network adapter and attached it to the configured NAT Network.
 
 ```text
 Adapter:          Adapter 1
@@ -114,7 +104,7 @@ Virtual cable:    Connected
 
 ## Step 3. Configure the Shared Folder
 
-I configured the host Downloads folder as a VirtualBox shared folder with **full access** and **auto-mount** enabled. The Kali desktop also shows the mounted `sf_Downloads` folder.
+Configured the host Downloads folder as a VirtualBox shared folder with **full access** and **auto-mount** enabled. The Kali desktop also shows the mounted `sf_Downloads` folder.
 
 This provides a way to transfer lab files between the host and Kali. Because it permits access to host files, a dedicated lab-only folder with limited permissions would reduce exposure during future testing.
 
@@ -124,7 +114,7 @@ This provides a way to transfer lab files between the host and Kali. Because it 
 
 ## Step 4. Start Kali Linux
 
-I started the Kali VM and confirmed that the desktop loaded successfully.
+Started the Kali VM and confirmed that the desktop loaded successfully.
 
 ![Kali Linux desktop running in VirtualBox](D-Kali.png)
 
@@ -132,7 +122,7 @@ I started the Kali VM and confirmed that the desktop loaded successfully.
 
 ## Step 5. Configure Kali's IPv4 Settings
 
-Using **Wired connection 1 → IPv4 Settings**, I selected the manual addressing method and entered:
+Using **Wired connection 1 → IPv4 Settings**, selected the manual addressing method and entered:
 
 ```text
 IP address:    10.0.0.2
@@ -148,7 +138,7 @@ A consistent address makes Kali easier to identify during subsequent lab exercis
 
 ### Verify the Address
 
-I checked the active interface using:
+Checked the active interface using:
 
 ```bash
 ifconfig
@@ -162,7 +152,7 @@ The output shows `eth0` with IPv4 address `10.0.0.2`, subnet mask `255.255.255.0
 
 ## Step 6. Create a Kali Baseline Snapshot
 
-After configuring Kali's address, I created a snapshot to preserve the configured VM state.
+After configuring Kali's address, created a snapshot to preserve the configured VM state.
 
 ```text
 Snapshot name:        Snapshot 1
@@ -171,15 +161,12 @@ Snapshot description: Clean Kali Linux Ip addressing
 
 ![Kali snapshot name and description](G-Kali%20Snapshot.png)
 
-The next screenshot shows the snapshot operation in progress.
-
-![Kali snapshot creation in progress](H-Kali%20Snapshot%20In-progress.png)
 
 ---
 
 ## Step 7. Restore the Snapshot
 
-I selected the saved snapshot in VirtualBox and used the **Restore** option.
+Selected the saved snapshot in VirtualBox and used the **Restore** option.
 
 ![Kali snapshot restore option](I-Kali%20Snapshot%20Restore.png)
 
@@ -206,7 +193,7 @@ DNS servers: 8.8.8.8, 10.0.0.1
 
 ## Step 9. Configure Windows 10 IPv4 Settings
 
-In the Windows Ethernet IPv4 properties, I configured:
+In the Windows Ethernet IPv4 properties configured:
 
 ```text
 IP address:    10.0.0.10
@@ -224,7 +211,7 @@ Alternate DNS: 10.0.0.1
 
 ## Android 9 Connectivity Tests
 
-From the Android terminal, I tested an external IP, the gateway, Kali and Windows:
+From the Android terminal, tested an external IP, the gateway, Kali and Windows:
 
 ```bash
 ping -c 4 8.8.8.8
@@ -239,13 +226,13 @@ The external IP, gateway and Kali tests each returned four replies with **0% pac
 
 ## Windows 10 Connectivity Tests
 
-I checked the Windows configuration with:
+Checked the Windows configuration with:
 
 ```cmd
 ipconfig /all
 ```
 
-I then ran:
+then ran:
 
 ```cmd
 ping 10.0.0.10
@@ -254,13 +241,13 @@ ping 10.0.0.1
 ping 10.0.0.9
 ```
 
-The screenshot confirms the configured address and DNS servers. All four displayed ping tests completed with **0% packet loss**. The ping to `10.0.0.10` is a self-test; the ping to `10.0.0.9` verifies communication with Android. A Windows-to-Kali ping is not shown.
+This confirms the configured address and DNS servers. All four displayed ping tests completed with **0% packet loss**. The ping to `10.0.0.10` is a self-test; the ping to `10.0.0.9` verifies communication with Android. A Windows-to-Kali ping is not shown.
 
 ![Windows IP configuration and connectivity tests](N-Windows%20-%20Kali%20and%20Android.png)
 
 ## Kali Linux Connectivity Tests
 
-From Kali, I verified the interface address and tested the gateway, external IP, Android and Windows:
+From Kali, verified the interface address and tested the gateway, external IP, Android and Windows:
 
 ```bash
 ifconfig
@@ -281,11 +268,8 @@ All displayed ping tests completed with **0% packet loss**.
 
 ## Initial Android-to-Windows Ping Failure
 
-The first Android ping to `10.0.0.10` recorded four transmitted packets with no replies. Repeating the command later produced four replies with no packet loss.
+The first Android ping to `10.0.0.10` recorded four transmitted packets with no replies. After enabling ICMPv4 domain and private inbound firewall rule and run the command again and the ping goes through.
 
-
-
-For a similar issue, useful checks include confirming that the destination VM is running, both adapters use the same NAT Network, the IP settings are correct, and the destination firewall permits the intended ICMP test.
 
 ---
 
@@ -304,7 +288,6 @@ For a similar issue, useful checks include confirming that the destination VM is
 
 This lab is intended for education and authorized testing of systems I own or have explicit permission to assess.
 
-NAT connectivity and shared folders do not provide complete isolation. For future exercises involving untrusted software, I would review outbound access, shared folders and adapter permissions before starting.
 
 ---
 
