@@ -330,12 +330,11 @@ NAT connectivity and shared folders do not provide complete isolation. For futur
 ---
 
 # 👤 Author
----
 **Mokone Tebogo**
 
 **LinkedIn:** https://www.linkedin.com/in/tebogo-mokone-ba2b35261/
 
 ---
+
 # 📌 Project Information
----
 **Programme Name:** Cybersecurity at Networkwalks | **Cohort:** B084 | **Week:** 01 | **Module:** PM1 — Cybersecurity Lab Setup | **Repository:** GitHub
