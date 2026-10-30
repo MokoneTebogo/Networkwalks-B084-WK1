@@ -347,10 +347,10 @@ NAT connectivity and shared folders do not provide complete isolation. For futur
 
 ---
 
-# 👤 Project Owner
+# 👤 Author
 **Mokone Tebogo**
 
-LinkedIn: (https://www.linkedin.com/in/tebogo-mokone-ba2b35261/)
+**LinkedIn:** https://www.linkedin.com/in/tebogo-mokone-ba2b35261/
 
 ---
 
