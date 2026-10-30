@@ -285,7 +285,7 @@ The first Android ping to `10.0.0.10` recorded four transmitted packets with no 
 
 # 🔐 Security & Ethical Use
 
-This lab is intended for education and authorized testing of systems I own or have explicit permission to assess.
+This lab is intended for education and authorized testing of systems I have explicit permission to assess.
 
 
 ---
