@@ -22,7 +22,7 @@ This project documents my **Networkwalks B084 — Week 1, Project Module 1** cyb
 
 Configured Kali Linux, Windows 10 and Android 9 on a shared **NAT Network**, checked their IPv4 settings, created and restored a Kali snapshot, and tested communication between the virtual machines.
 
-The lab provides a foundation for future networking, reconnaissance and authorized security exercises. The screenshots below document the configuration and results achieved during this project.
+The lab provides a foundation for future networking, reconnaissance and authorized security exercises.
 
 ---
 
@@ -49,7 +49,6 @@ All three virtual machines use the same IPv4 subnet and gateway.
 | Android 9 | `10.0.0.9` | `255.255.255.0` | `10.0.0.1` | `8.8.8.8`, `10.0.0.1` |
 | Windows 10 | `10.0.0.10` | `255.255.255.0` | `10.0.0.1` | Preferred: `8.8.8.8`; alternate: `10.0.0.1` |
 
-The NAT Network supports communication between the lab VMs and outbound connectivity through the host. It is **not an air-gapped environment**.
 
 ---
 
@@ -241,7 +240,7 @@ ping 10.0.0.1
 ping 10.0.0.9
 ```
 
-This confirms the configured address and DNS servers. All four displayed ping tests completed with **0% packet loss**. The ping to `10.0.0.10` is a self-test; the ping to `10.0.0.9` verifies communication with Android. A Windows-to-Kali ping is not shown.
+This confirms the configured address and DNS servers. All four displayed ping tests completed with **0% packet loss**. The ping to `10.0.0.10` is a self-test; the ping to `10.0.0.9` verifies communication with Android.
 
 ![Windows IP configuration and connectivity tests](N-Windows%20-%20Kali%20and%20Android.png)
 
