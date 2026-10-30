@@ -339,17 +339,19 @@ NAT connectivity and shared folders do not provide complete isolation. For futur
 
 # 🔗 Tools & References
 
-- [Oracle VirtualBox](https://www.virtualbox.org/)
-- [Kali Linux](https://www.kali.org/)
-- [Networkwalks](https://networkwalks.com/)
-- [Waqas Karim — Cybersecurity Lab Setup Sample](https://github.com/waqaskarimccie/NETWORKWALKS-B082-WK1-PM1-CYBERSECURITY-LAB-SETUP-SAMPLE)
+- **Oracle VirtualBox:** https://virtualbox.org/wiki/Downloads
+- **Kali Linux:**  https://kali.org/get-kali
+- **Windows:** https://www.microsoft.com/software-download/windows10
+- **Android:** https://sourceforge.net/projects/android-x86/files/Release%209.0/
 
-**Acknowledgement:** The organization and presentation of this README were inspired by Waqas Karim's sample. The configuration values, screenshots and verification results document this B084 lab.
 
 ---
 
 # 👤 Project Owner
+**Mokone Tebogo**
 
-**GitHub:** [MokoneTebogo](https://github.com/MokoneTebogo)
+LinkedIn: (https://www.linkedin.com/in/tebogo-mokone-ba2b35261/)
 
-**Programme:** Networkwalks Cybersecurity · **Cohort:** B084 · **Week:** 01 · **Module:** PM1 — Cybersecurity Lab Setup
+---
+
+**Programme:** Cybersecurity at Networkwalks | **Cohort:** B084 | **Week:** 01 | **Module:** PM1 — Cybersecurity Lab Setup | **Repository:** GitHub
